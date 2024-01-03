@@ -4,6 +4,13 @@
     margin: 20px;
     border: 1px solid #ccc;
     min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 100px;
+
 
 }
 
@@ -13,6 +20,10 @@
     border: 1px solid #ccc;
     margin: 10px;
 }
+
+/* .items .item:nth-child(3){
+    align-self: start;
+} */
 
 .post{
     background-color: #efefef;
@@ -29,3 +40,15 @@
     border-radius: 10px;
 }
 
+.author-info{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.post-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 5px;
+}

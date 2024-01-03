@@ -25,6 +25,7 @@ html{
 .positioning{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .hidden{
     display: none;
