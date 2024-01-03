@@ -1,0 +1,35 @@
+html{
+    font : 1em 'Open Sans', sans-serif;
+}
+
+.dropdown-button{
+    cursor: pointer;
+}
+
+.flexbox-basics{
+    border : 1px solid #ccc;
+    padding: 20px;
+    background-color: #ff847e;
+}
+
+.flex-layout{
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fecea8;
+}
+
+.flex-layout img{
+    width: 100%;
+}
+
+.positioning{
+    display: flex;
+    flex-direction: row;
+}
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
+}

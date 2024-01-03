@@ -1,0 +1,269 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="practice.css" />
+    <title>CSS Workshop</title>
+  </head>
+  <body>
+    <h1 class="flexbox-heading">
+      Flexbox <span class="dropdown-button">➡️</span>
+    </h1>
+    <div class="flexbox-basics hidden">
+      <p>
+        Flexbox is a one-dimensional layout method for laying out items in rows
+        or columns. Items flex to fill additional space and shrink to fit into
+        smaller spaces. <br />
+        <br />
+        <strong>Flexbox is a whole module and not a single property.</strong>
+        <br />
+        <br />
+        <strong>Flexbox is direction-agnostic</strong> as opposed to the regular
+        layouts (block which is vertically-based and inline which is
+        horizontally-based). While those work well for pages, they lack
+        flexibility (no pun intended) to support large or complex applications
+        (especially when it comes to orientation changing, resizing, stretching,
+        shrinking, etc.).
+      </p>
+
+      <h2>Layout <span class="dropdown-button">➡️</span></h2>
+      <div class="flex-layout hidden">
+        <p>
+          <strong>Flex container</strong> is the parent element to the flex
+          items. It is also known as a flexbox. It enables a flex context for
+          all its direct children. <br />
+          <br />
+          <strong>Flex items</strong> are the children of a flex container. Flex
+          items are the direct children of a flex container and are laid out
+          inside the flex container’s main or cross axis, depending on their
+          flex-direction. <br />
+          <br />
+        </p>
+        <img
+          height="300px"
+          src="https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg"
+          alt="flex-container"
+        />
+
+        <p>
+          <strong><a>#Practice 0:</a></strong> Identify the flex container in
+          the green section below and make it a flex container
+        </p>
+      </div>
+
+      <h2>Flex-direction <span class="dropdown-button">➡️</span></h2>
+      <div class="flex-layout hidden">
+        <div class="positioning">
+          <p>
+            The <strong>flex-direction</strong> property establishes the
+            main-axis (default: row) and the direction (normal or reversed).
+            <br />
+            <br />
+            <strong>row</strong> (default): left to right in ltr; right to left
+            in rtl <br />
+            <strong>row-reverse</strong>: right to left in ltr; left to right in
+            rtl <br />
+            <strong>column</strong>: same as row but top to bottom <br />
+            <strong>column-reverse</strong>: same as row-reverse but bottom to
+            top
+            <br />
+          </p>
+          <img
+            height="400px"
+            src="https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg"
+            alt="flex-direction"
+          />
+        </div>
+
+        <p>
+          <strong><a>#Practice 1:</a></strong> Align the items in the items
+          container in a row, column, row-reverse, column-reverse
+        </p>
+
+        <h2>
+          Positioning items in a flex container
+          <span class="dropdown-button">➡️</span>
+        </h2>
+
+        <div class="flex-layout hidden">
+          <div class="positioning">
+            <p>
+              <strong>justify-content</strong> aligns items along the main axis.
+              <br />
+              <br />
+              <strong>flex-start</strong> (default): items are packed toward the
+              start of the flex-direction. <br />
+              <strong>flex-end</strong>: items are packed toward the end of the
+              flex-direction. <br />
+              <strong>start</strong>: items are packed toward the start of the
+              writing-mode direction. <br />
+              <strong>end</strong>: items are packed toward the end of the
+              writing-mode direction. <br />
+              <strong>left</strong>: items are packed toward left edge of the
+              container, unless that doesn’t make sense with the flex-direction,
+              then it behaves like start. <br />
+              <strong>right</strong>: items are packed toward right edge of the
+              container, unless that doesn’t make sense with the flex-direction,
+              then it behaves like start. <br />
+              <strong>center</strong>: items are centered along the line <br />
+              <strong>space-between</strong>: items are evenly distributed in
+              the line; first item is on the start line, last item on the end
+              line
+              <br />
+              <strong>space-around</strong>: items are evenly distributed in the
+              line with equal space around them. Note that visually the spaces
+              aren’t equal, since all the items have equal space on both sides.
+              The first item will have one unit of space against the container
+              edge, but two units of space between the next item because that
+              next item has its own spacing that applies. <br />
+              <strong>space-evenly</strong>: items are distributed so that the
+              spacing between any two items (and the space to the edges) is
+              equal.
+              <br />
+              <strong>stretch</strong> (default): stretch to fill the container
+              (still respect min-width/max-width) <br />
+              <br />
+              <strong><a>#Practice 2:</a></strong> Position the items in the
+              main axis using justify-content
+              <br />
+              <br />
+              <strong>align-items</strong> aligns items along the cross axis.
+              <br />
+              <br />
+              <strong>stretch</strong> (default): stretch to fill the container
+              (still respect min-height/max-height) <br />
+              <strong>flex-start</strong>: items are packed toward the start of
+              the flex-direction. <br />
+              <strong>flex-end</strong>: items are packed toward the end of the
+              flex-direction. <br />
+              <strong>start</strong>: items are packed toward the start of the
+              writing-mode direction. <br />
+              <strong>end</strong>: items are packed toward the end of the
+              writing-mode direction. <br />
+              <strong>center</strong>: items are centered along the line <br />
+              <strong>baseline</strong>: items are aligned such as their
+              baselines align <br />
+              <br />
+              <strong><a>#Practice 3:</a></strong> Position the items in the
+              cross axis using align-items
+            </p>
+
+            <img
+              height="500px"
+              src="https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg"
+              alt="justify-content"
+            />
+            <img
+              height="500px"
+              src="https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg"
+              alt="align-items"
+            />
+          </div>
+        </div>
+      </div>
+
+      <h2>
+        Responsive flexbox properties <span class="dropdown-button">➡️</span>
+      </h2>
+      <div class="flex-layout hidden">
+        <p>
+          <strong>flex-wrap</strong> controls whether flex items are forced into
+          a single line or can be wrapped onto multiple lines. If wrapping is
+          allowed, it controls the direction that lines are stacked.
+          <br />
+          <br />
+          <strong>nowrap</strong> (default): all flex items will be on one line
+          <br />
+          <strong>wrap</strong>: flex items will wrap onto multiple lines, from
+          top to bottom. <br />
+          <strong>wrap-reverse</strong>: flex items will wrap onto multiple
+          lines from bottom to top.
+          <br />
+          <br />
+          <strong><a>#Practice 4:</a></strong> Add more items to the items div
+          and wrap them onto multiple lines
+          <br />
+          <br />
+          <strong>align-self</strong> allows the default alignment (or the one
+          specified by align-items) to be overridden for individual flex items.
+          <br />
+          <br />
+
+          auto (default) | flex-start | flex-end | center | baseline | stretch
+
+          <br />
+          <br />
+          <strong><a>#Practice 5:</a></strong> Align the 3rd item in the items
+          using align-self
+
+          <br />
+          <br />
+
+          <strong>gap, row-gap, column-gap</strong>
+          <br />
+          <br />
+          gap: shorthand for row-gap and column-gap row-gap: gap between rows
+          column-gap: gap between columns
+          <br />
+          <br />
+
+          <strong><a>#Practice 6:</a></strong> Add a gap between the items in
+          the items container
+        </p>
+      </div>
+    </div>
+
+    <div class="items">
+      <div class="item">
+        <h2>Item 1</h2>
+      </div>
+      <div class="item">
+        <h2>Item 2</h2>
+      </div>
+      <div class="item">
+        <h2>Item 3</h2>
+      </div>
+      <div class="item">
+        <h2>Item 4</h2>
+      </div>
+    </div>
+
+    <h2>Apply your learning <span class="dropdown-button">➡️</span></h2>
+    <div class="apply-learning hidden">
+      <p>
+        Remove the hidden class from the below div in the HTML and make it look
+        like the image:
+      </p>
+      <img
+        height="600"
+        src="./asset/Screenshot 2024-01-03 at 2.24.31 PM.png"
+        alt="practice"
+      />
+    </div>
+
+    <div class="post hidden">
+      <img src="https://picsum.photos/200/300" alt="item" />
+      <h2>A beautiful day</h2>
+      <div class="author-info">
+        <p>John Doe</p>
+        <p>May 5, 2020</p>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptatum, voluptate, quibusdam, quia voluptas quod quos exercitationem
+        voluptatem quas doloribus quidem. Quisquam voluptatum, voluptate,
+        quibusdam, quia voluptas quod quos exercitationem voluptatem quas
+        doloribus quidem.
+      </p>
+
+      <div class="post-actions">
+        <p>❤️</p>
+        <p>💬</p>
+        <p>🔁</p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
