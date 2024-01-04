@@ -214,7 +214,206 @@
       </div>
     </div>
 
-    <div class="items">
+    <h1 class="flexbox-heading">
+      Grid <span class="dropdown-button">➡️</span>
+    </h1>
+    <div class="flexbox-basics hidden">
+      <p>
+        CSS Grid is a two-dimensional layout system for the web. The grid is the
+        intersecting set of horizontal and vertical grid lines formed by placing
+        grid lines at the start and end of each column and row. <br />
+        <br />
+      </p>
+      <img
+        height="300px"
+        src="https://www.w3schools.com/css/grid_lines.png"
+        alt="grid"
+      />
+
+      <h2>Layout <span class="dropdown-button">➡️</span></h2>
+
+      <div class="flex-layout hidden">
+        <p>
+          <strong>Grid container</strong> is the parent element to the grid
+          items. It is also known as a grid box. It enables a grid context for
+          all its direct children. <br />
+          To declare a grid container, add
+          <span style="color: blue">display: grid</span> to the element. <br />
+          <br />
+          <strong>Grid cells</strong>
+          are cells inside a grid container. Is the smallest unit on a grid.
+          Conceptually it is like a table cell. When the grid is defined as a
+          parent the child items will lay themselves out in one cell each of the
+          defined grid. <br />
+          <br />
+          <br />
+        </p>
+        <p>
+          <strong><a>#Challenge 1:</a></strong> Switch to the grid
+          <span style="color: blue">div</span> with the class wrapper and make
+          it a grid container (open the inspect tool, select element >> layout
+          and select the div.wrapper from the grid overlay)
+        </p>
+
+        <p>Reference image<span class="dropdown-button">➡️</span></p>
+        <img
+          class="hidden"
+          style="border: 5px solid red"
+          src="./asset/Screenshot 2024-01-04 at 12.44.40 PM.png"
+          alt="grid"
+        />
+
+        <p>
+          <strong
+            >How many columns and rows are there in the grid container?</strong
+          >
+        </p>
+      </div>
+
+      <h2>
+        Grid-template-columns & Grid-template-rows<span class="dropdown-button"
+          >➡️</span
+        >
+      </h2>
+      <div class="flex-layout hidden">
+        <p>
+          The <strong>grid-template-columns</strong> property defines the
+          columns of the grid with a space-separated list of values. The
+          <strong>grid-template-rows</strong> property defines the rows of the
+          grid with a space-separated list of values. The values represent the
+          track size, and the space between them represents the grid line.
+
+          <br />
+          <br />
+          <strong>auto</strong>: the size of the column is the size of the
+          content <br />
+          <strong>1fr</strong>: the size of the column is the remaining space
+          after all other columns are laid out <br />
+          <strong>repeat</strong>: repeat the pattern (repeat(3, 100px))<br />
+          <strong>minmax</strong>: minimum and maximum size of the column
+          (minmax(100px, 400px)) <br />
+          <br />
+
+          To move a item to a specific row and column we can use the grid-column
+          and grid-row properties. <br />
+          <br />
+
+          If we want to move div `Three` to 2nd row and 3rd column we can use
+          the following properties:
+          <br />
+          <br />
+          <strong>grid-column-start</strong>: 3 <br />
+          <strong>grid-column-end</strong>: 4 <br />
+          <strong>grid-row-start</strong>: 2 <br />
+          <strong>grid-row-end</strong>: 3 <br />
+          <br />
+          <br />
+          Alternatively, we can use:
+          <strong> grid-column: 3 / 4; grid-row: 2 / 3;</strong> which is a
+          shorthand for the above properties.
+          <br />
+          An item can span multiple rows and columns. <br />
+          <br />
+
+          <strong><a>#Challenge 2:</a></strong> Set the grid-template-columns to
+          1fr 2fr 2fr 1fr and grid-template-rows to 1fr 1fr 1fr
+          <br />
+          <br />
+          <strong>How many columns and row in the grid?</strong>
+          <br />
+          <br />
+          <strong><a>#Challenge 3:</a></strong> Set the grid-template-columns to
+          4 columns using repeat and 1fr each and grid-template-rows to
+          repeat(3, 1fr)
+
+          <br />
+        </p>
+      </div>
+
+      <h2>Grid-template-areas<span class="dropdown-button">➡️</span></h2>
+      <div class="flex-layout hidden">
+        <p>
+          The <strong>grid-template-areas</strong> property specifies named grid
+          areas. The syntax of the grid-template-areas property is the same as
+          the grid-area property. <br />
+          <br />
+          <strong><a>#Challenge 4:</a></strong> Set the grid-template-areas to
+          the following and see the result
+          <br />
+          <br />
+          "header header header header" <br />
+          "main main main sidebar" <br />
+          "main main main sidebar" <br />
+          "footer footer footer footer"
+          <br />
+          <br />
+        </p>
+      </div>
+
+      <h2>
+        Grid-gap, grid-column-gap, grid-row-gap<span class="dropdown-button"
+          >➡️</span
+        >
+      </h2>
+      <div class="flex-layout hidden">
+        <p>
+          We can add a gap between the columns and rows using:
+
+          <br />
+          <br />
+          <strong>grid-column-gap</strong>: 10px <br />
+          <strong>grid-row-gap</strong>: 10px <br />
+          <br />
+          This will add a gap of 10px between the columns and rows. <br />
+          <br />
+          Alternatively, we can use the grid-gap property. <br />
+          The <strong>grid-gap</strong> property is a shorthand property for the
+          grid-row-gap and the grid-column-gap properties. <br />
+          <br />
+          <strong><a>#Challenge 5:</a></strong> Set the grid-gap to 10px
+          <br />
+          <br />
+        </p>
+      </div>
+
+      <h2>Grid and Flex <span class="dropdown-button">➡️</span></h2>
+      <div class="flex-layout hidden">
+        <p>
+          Grid and Flexbox are not mutually exclusive. They can be used together
+          in a layout. <br />
+          We use Grid to layout the whole page. And we usually use Flexbox to
+          layout the items inside a grid cell. We can make an item inside a grid
+          to a flexbox <br />
+
+          <br />
+
+          <strong><a>#Challenge 6:</a></strong> Wrap div two, three, four in a
+          flexbox container div with class `main` and give the container
+          grid-area of main. <br />
+          Add this to class main in the css file:
+          <br />
+          <br />
+          display: flex; <br />
+          flex-direction: row; <br />
+          flex-wrap: wrap; <br />
+          justify-content: space-evenly; <br />
+          align-items: center; <br />
+
+          <br />
+
+          <strong><a>#Challenge 7:</a></strong> Add more items to the main div
+          and play around with the flexbox properties and see how it affects the
+          grid
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-and-grid">
+      <button class="flex-button">Flexbox</button>
+      <button class="grid-button">Grid</button>
+    </div>
+
+    <div class="items hidden">
       <div class="item">
         <h2>Item 1</h2>
       </div>
@@ -229,38 +428,51 @@
       </div>
     </div>
 
-    <h2>Apply your learning <span class="dropdown-button">➡️</span></h2>
-    <div class="apply-learning hidden">
-      <p>
-        Remove the hidden class from the below div in the HTML and make it look
-        like the image:
-      </p>
-      <img
-        height="600"
-        src="./asset/Screenshot 2024-01-03 at 2.24.31 PM.png"
-        alt="practice"
-      />
+    <div class="wrapper hidden">
+      <div class="one">One</div>
+      <!-- <div class="main"> -->
+      <div class="two">Two</div>
+      <div class="three">Three</div>
+      <div class="four">Four</div>
+      <!-- </div> -->
+      <div class="five">Five</div>
+      <div class="six">Six</div>
     </div>
 
-    <div class="post hidden">
-      <img src="https://picsum.photos/200/300" alt="item" />
-      <h2>A beautiful day</h2>
-      <div class="author-info">
-        <p>John Doe</p>
-        <p>May 5, 2020</p>
+    <div class="flex-practice hidden">
+      <h2>Apply your learning <span class="dropdown-button">➡️</span></h2>
+      <div class="apply-learning hidden">
+        <p>
+          Remove the hidden class from the below div in the HTML and make it
+          look like the image:
+        </p>
+        <img
+          height="600"
+          src="./asset/Screenshot 2024-01-03 at 2.24.31 PM.png"
+          alt="practice"
+        />
       </div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        voluptatum, voluptate, quibusdam, quia voluptas quod quos exercitationem
-        voluptatem quas doloribus quidem. Quisquam voluptatum, voluptate,
-        quibusdam, quia voluptas quod quos exercitationem voluptatem quas
-        doloribus quidem.
-      </p>
 
-      <div class="post-actions">
-        <p>❤️</p>
-        <p>💬</p>
-        <p>🔁</p>
+      <div class="post hidden">
+        <img src="https://picsum.photos/200/300" alt="item" />
+        <h2>A beautiful day</h2>
+        <div class="author-info">
+          <p>John Doe</p>
+          <p>May 5, 2020</p>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, voluptate, quibusdam, quia voluptas quod quos
+          exercitationem voluptatem quas doloribus quidem. Quisquam voluptatum,
+          voluptate, quibusdam, quia voluptas quod quos exercitationem
+          voluptatem quas doloribus quidem.
+        </p>
+
+        <div class="post-actions">
+          <p>❤️</p>
+          <p>💬</p>
+          <p>🔁</p>
+        </div>
       </div>
     </div>
 
